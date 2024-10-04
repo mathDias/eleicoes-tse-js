@@ -1,0 +1,12 @@
+/node_modules
+/test/*
+.DS_Store
+*.log
+.idea
+.editorconfig
+.vscode
+.cache
+.eslintcache
+.cspellcache
+package-lock.json
+/dist

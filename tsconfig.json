@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noImplicitAny": true,
+      "declarationDir": "dist/types",
+      "moduleResolution": "node",
+      "declaration": true,
+      "target": "ES2016",
+      "module": "es6",
+      "strict": true
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ],
+    "include": ["./src/**/*"],
+  }
+  
