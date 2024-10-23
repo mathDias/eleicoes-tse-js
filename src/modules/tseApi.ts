@@ -82,9 +82,9 @@ export default class TseAPI {
     }
     
     async init({ambiente,ciclo,codigo,codigoCargo,codigoMunicipio,uf}: eleicaoProps & resultProps, callback: any) {
-        const baseUrl = ambiente === 'simulado' ? 'https://resultados-sim.tse.jus.br/simulado/' : "https://resultados.tse.jus.br/";
-        const apiUrl = baseUrl+ ciclo+"/" + codigo+"/dados/"+uf+"/"+uf+codigoMunicipio+"-c"+codigoCargo+"-e0"+codigo+"-u.json";
-        this.fotoUrl = baseUrl+ ciclo+"/" + codigo+"/fotos/"+uf+"/";
+        const baseUrl = ambiente === 'simulado' ? 'https://resultados-sim.tse.jus.br/simulado/' : "https://resultados.tse.jus.br/oficial/";
+        const apiUrl = baseUrl+ ciclo+"/" + parseInt(codigo,10)+"/dados/"+uf+"/"+uf+codigoMunicipio+"-c"+codigoCargo+"-e"+codigo+"-u.json";
+        this.fotoUrl = baseUrl+ ciclo+"/" + parseInt(codigo,10)+"/fotos/"+uf+"/";
         // "https://resultados-sim.tse.jus.br/simulado/ele2024/10143/dados/sp/sp71072-c0013-e010143-u.json";
         fetch(apiUrl)
         .then(response => {
